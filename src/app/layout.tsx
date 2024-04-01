@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Battambang, Inter, Kantumruy_Pro, Khmer, Poppins, Roboto } from "next/font/google";
+import { Battambang, Inter, Kantumruy_Pro, Khmer, Khula, Konkhmer_Sleokchher, Poppins, Roboto } from "next/font/google";
 import "./globals.css";
 import NextUILayout from "./NextUIProvider";
 import NavbarComponent from "@/components/layouts/navbar/NavbarComponent";
@@ -18,11 +18,11 @@ const roboto = Roboto({
   display: 'swap',
   variable: "--font-Roboto",
 });
-const battambang = Battambang({
-  weight: ['400', '700'],
+const konkhmer_Sleokchher = Konkhmer_Sleokchher ({
+  weight: ['400', '400'],
   subsets: ['latin'],
   display: 'swap',
-  variable: "--font-Battambang",
+  variable: "--font-Konkhmer-Sleokchher",
 });
 
 export const metadata: Metadata = {
@@ -51,7 +51,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${roboto.variable} ${battambang.variable}`}>
+      <body className={`${roboto.variable} ${konkhmer_Sleokchher.variable}`}>
         <NextUILayout>
           <StyledJsxRegistry>
             <NavbarComponent />
